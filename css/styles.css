@@ -63,7 +63,6 @@ h1, h2, h3, p {
   list-style: none;
 }
 input {
-  margin: 0;
   outline: 0;
 }
 .address-header-list .link {
@@ -403,7 +402,7 @@ img {
   display: flex;
 }
 .contacts {
-  margin-right: 70px;
+  margin-right: auto;
 }
 .footer .logo-link .logo-link-second-part {
   color: var(--background-color-01);
@@ -427,7 +426,7 @@ img {
   color: var(--text-color-03);
 }
 .social-network {
-  margin-right: 93px;
+  margin-right: auto;
 }
 .title-social-network {
   display: inline-block;
@@ -456,7 +455,7 @@ img {
   text-transform: uppercase;
 }
 .email-input {
-  min-width: 358px;
+  width: 358px;
   margin-right: 12px;
   border-radius: 4px;
   background: var(--input-background-color);
@@ -465,10 +464,14 @@ img {
   padding: 15px 16px;
   color:var(--background-color-01);
 }
+.email-input::placeholder {
+  color:var(--text-color-03);
+  line-height: 1.25;
+}
 .submit-button {
   display: inline-flex;
   align-items: center;
-  padding: 10px 28px;
+  padding: 10px 29px;
   border-radius: 4px;
   background-color: var(--brand-color-01);
   border-style: none;
