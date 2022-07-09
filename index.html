@@ -244,6 +244,7 @@
           </ul>
         </div>
       </section>
+
       <section class="clients section">
         <div class="container">
           <h2 class="clients-title">Постоянные клиенты</h2>
@@ -335,8 +336,36 @@
       </div>
     </footer>
 
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
+
+        <form class="modal-form">
+          <b>Оставте свои данные, мы вам перезвоним</b>
+          <ul class="list modal-form-list">
+            <li class="form-field">
+              <label for="name">Имя</label>
+              <input type="text" name="name" id="name">
+            </li>
+            <li class="form-field">
+              <label for="tel">Телефон</label>
+              <input type="tel" name="tel" id="tel">
+            </li>
+            <li class="form-field">
+              <label for="mail">Почта</label>
+              <input type="email" name="mail" id="mail">
+            </li>
+          </ul>
+          <div class="form-field-textarea">
+            <label for="comment">Комментарий</label>
+            <textarea class="textarea-comment" name="comment" id="comment"></textarea>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox">
+            <label>Соглашаюсь с рассылкой и принимаю Условия договора</label>
+          </div>
+          <button class="modal-submit-button">Отправить</button>
+        </form>
+
         <button class="modal-button-close" data-modal-close>
           <svg width="18px" height="18px"><use href="./images/symbol-defs.svg#modal-button-close"></use></svg>
         </button>

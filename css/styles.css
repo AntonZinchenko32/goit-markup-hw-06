@@ -582,6 +582,7 @@ img {
   left:50%;
   height: 581px;
   width: 528px;
+  padding: 40px;
   background-color: var(--background-color-01);
   box-shadow: 
   0px 1px 3px var(--shadow-color-01), 
@@ -607,7 +608,34 @@ img {
   border-radius: 50%;
   cursor: pointer;
 }
-
+.modal-form {
+  outline: red solid 2px;
+}
+.modal-form b {
+  display: block;
+  margin-bottom: 12px;
+}
+.modal-form-list li {
+  outline: blue solid 2px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form-field-textarea {
+  margin-bottom: 20px;
+}
+.textarea-comment {
+  width: 100%;
+  resize: none;
+}
+.checkbox {
+  margin-bottom: 30px;
+}
+.modal-submit-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 55px;
+}
 /* *****Elements behavior***** */
 .link:hover,
 .link:hover:focus {
