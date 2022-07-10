@@ -6,6 +6,7 @@
   --text-color-01: #212121;
   --text-color-02:#757575;
   --text-color-03:rgba(255, 255, 255, 0.6);
+  --text-color-04: rgba(117, 117, 117, 0.5);
 
   --brand-color-01: #2196f3;
   --brand-color-02: #2f303a;
@@ -37,7 +38,8 @@
   --overlay-color: rgba(33, 150, 243, 0.9);
 
   --input-background-color: #2196F300; 
-  --input-border-color: rgba(255, 255, 255, 0.3);
+  --input-border-color-01: rgba(255, 255, 255, 0.3);
+  --input-border-color-02: rgba(33, 33, 33, 0.2);
 }
 
 /* *****Styling body***** */
@@ -61,9 +63,6 @@ h1, h2, h3, p {
   padding-left: 0px;
   margin: 0;
   list-style: none;
-}
-input {
-  outline: 0;
 }
 .address-header-list .link {
   fill:var(--text-color-02);
@@ -445,33 +444,34 @@ img {
 }
 
 /* Форма отправки email */
-.send-form > b {
+.send-form .send-label {
   display: flex;
   margin-top: 12px;
   margin-bottom: 20px;
   color: var(--background-color-01);
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
-.email-input {
+.send-email-input {
   width: 358px;
   margin-right: 12px;
   border-radius: 4px;
   background: var(--input-background-color);
-  border: 1px solid var(--input-border-color);
+  border: 1px solid var(--input-border-color-01);
   filter: drop-shadow(0px 4px 4px var(--shadow-color-08));
   padding: 15px 16px;
   color:var(--background-color-01);
 }
-.email-input::placeholder {
+.send-email-input::placeholder {
   color:var(--text-color-03);
   line-height: 1.25;
 }
 .submit-button {
   display: inline-flex;
   align-items: center;
-  padding: 10px 29px;
+  padding: 10px 28px 10px 29px;
   border-radius: 4px;
   background-color: var(--brand-color-01);
   border-style: none;
@@ -608,33 +608,86 @@ img {
   border-radius: 50%;
   cursor: pointer;
 }
-.modal-form {
-  outline: red solid 2px;
-}
 .modal-form b {
   display: block;
   margin-bottom: 12px;
+  text-align: center;
+  line-height: 1.05;
+  font-size: 20px;
 }
-.modal-form-list li {
-  outline: blue solid 2px;
-  display: flex;
-  flex-direction: column;
+.modal-form-list {
+  margin-bottom: 20px;
+}
+.modal-form-list li:not(:last-child) {
   margin-bottom: 10px;
 }
-.form-field-textarea {
-  margin-bottom: 20px;
+.modal-form-list li {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.17;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color:var(--text-color-02);
+}
+.modal-form-list li label {
+  margin-bottom: 4px;
+}
+.form-field input,
+.form-field-textarea textarea {
+  width: 100%;
+  border: 1px solid var(--input-border-color-02);
+  border-radius: 4px;
+  padding: 11px 12px 11px 42px;
+  font-size: 14px;
+}
+.input-box {
+  position: relative;
+}
+.input-icon {
+  position: absolute;
+  top: 11px;
+  bottom: 11px;
+  left: 12px;
+}
+.form-field-textarea textarea {
+  padding: 12px 16px;
+  line-height: 1.17;
 }
 .textarea-comment {
   width: 100%;
   resize: none;
 }
+.textarea-comment::placeholder {
+  color: var(--text-color-04);
+  line-height: 1.17;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+}
 .checkbox {
+  text-align: center;
   margin-bottom: 30px;
+  line-height: 1.71;
+  font-size: 14px;
+  color:var(--text-color-02);
+}
+.terms-link {
+  text-decoration: underline;
+  color: var(--brand-color-01);
 }
 .modal-submit-button {
   display: block;
   margin: 0 auto;
-  padding: 10px 55px;
+  padding: 10px 55px 10px 56px;
+  background: var(--brand-color-01);
+  box-shadow: 0px 4px 4px var(--shadow-color-08);
+  border-radius: 4px;
+  border-style: none;
+  color: var(--background-color-01);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  cursor: pointer;
+  letter-spacing: 0.06em;
 }
 /* *****Elements behavior***** */
 .link:hover,
@@ -676,12 +729,27 @@ img {
 .gallery-list-link:focus .overlay{
   transform: translateY(0);
 }
+.modal-button-close:hover,
+.modal-button-close:focus {
+  fill:var(--brand-color-01);
+}
+.input-box input:focus {
+  border-color: var(--brand-color-01);
+}
+.input-box input:focus + .input-icon
+{
+  border-color: var(--brand-color-01);
+  fill:var(--brand-color-01);
+}
 
 /* Переходи і анімація */
 .link,
-.button {
+.button,
+.input,
+.input-icon 
+{
   transition-property: 
-  color, fill, background-color, border-color, box-shadow;
+  color, fill, background-color, border-color, box-shadow, outline;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
