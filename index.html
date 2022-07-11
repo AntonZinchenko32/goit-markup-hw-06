@@ -336,7 +336,7 @@
       </div>
     </footer>
 
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <form class="modal-form">
           <b>Оставте свои данные, мы вам перезвоним</b>
@@ -373,17 +373,16 @@
               <textarea class="input textarea-comment" name="comment" id="comment" rows="7" placeholder="Введите текст"></textarea>
             </li>
           </ul>
-          <div class="form-field-checkbox">
-            <input class="checkbox" type="checkbox" name="terms" id="checkbox">
+          <label class="checkbox-label">
+            <input class="checkbox" type="checkbox" name="terms">
             <span class="custom-checkbox">
-              <svg width="16px" height="15px">
+              <svg class="checkbox-icon" width="16px" height="15px">
                 <use href="./images/icons.svg#icon-check-mark"></use>
               </svg>
             </span>
-            <label for="checkbox">Соглашаюсь с рассылкой и принимаю 
-              <a href="" class="link terms-link">Условия договора</a>
-            </label>
-          </div>
+            Соглашаюсь с рассылкой и принимаю&nbsp;
+            <a href="" class="link terms-link">Условия договора</a>
+          </label>
           <button class="button modal-submit-button" type="submit">Отправить</button>
         </form>
         <button class="modal-button-close" data-modal-close>
