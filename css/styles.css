@@ -663,12 +663,28 @@ img {
   font-size: 12px;
   letter-spacing: 0.01em;
 }
-.checkbox {
-  text-align: center;
+.form-field-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
   line-height: 1.71;
   font-size: 14px;
   color:var(--text-color-02);
+}
+.checkbox {
+  margin-right: 7px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.custom-checkbox {
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border-radius: 2px;
+  border:2px solid var(--text-color-01);
+  fill:tomato;
 }
 .terms-link {
   text-decoration: underline;
@@ -749,7 +765,7 @@ img {
 .input-icon 
 {
   transition-property: 
-  color, fill, background-color, border-color, box-shadow, outline;
+  color, fill, background-color, border-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
