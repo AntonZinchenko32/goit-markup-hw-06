@@ -580,7 +580,6 @@ img {
   visibility: visible;
   top:50%;
   left:50%;
-  height: 581px;
   width: 528px;
   padding: 40px;
   background-color: var(--background-color-01);
@@ -763,13 +762,21 @@ img {
 .modal-button-close:focus {
   fill:var(--brand-color-01);
 }
-.input-box input:focus {
+.input-box input:focus,
+.textarea-comment:focus {
   border-color: var(--brand-color-01);
+}
+.input-box input,
+.textarea-comment {
+  outline: none;
 }
 .input-box input:focus + .input-icon
 {
   border-color: var(--brand-color-01);
   fill:var(--brand-color-01);
+}
+.checkbox:focus + .custom-checkbox { 
+  border-color: var(--brand-color-01); 
 }
 .checkbox:checked + .custom-checkbox {
   background-color: var(--brand-color-01);
@@ -779,18 +786,18 @@ img {
   visibility: visible;
   opacity: 1;
 }
+.terms-link:hover {
+  text-decoration: none;
+}
 
 /* Переходи і анімація */
 .link,
 .button,
 .input,
-.input-icon,
-.custom-checkbox,
-.checkbox-icon
+.input-icon
 {
   transition-property: 
-  color, fill, background-color, border-color, box-shadow, visibility,
-  opacity;
+  color, fill, background-color, border-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
